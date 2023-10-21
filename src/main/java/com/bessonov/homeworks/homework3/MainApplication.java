@@ -9,18 +9,18 @@ public class MainApplication {
         Random random = new Random();
 
         //Генерируем диапазон случайных чисел от 8 до 12 включительно.
-        int arraLength = random.ints(8, 12).findFirst().getAsInt();
+        int arrayLength = random.ints(8, 12).findFirst().getAsInt();
 
         //Создаём двухмерный массив на основе сгенерированного диапазона и заполняем его случайными числами с
         // помощью метода randomGenerateArray
-        int[][] arr = randomGenerateArray(new int[arraLength][arraLength]);
+        int[][] arr = randomGenerateArray(new int[arrayLength][arrayLength]);
 
         //Вызываем метод для подсчета и возврата суммы всех элементов которые больше ноля, в двухмерном массиве
         //И выводим на экран результат
         System.out.println("Сумма всех элементов двухмерного массива равняется = " + sumOfPositiveElements(arr));
 
         //Вызываем метод для печати квадра из звездочек
-        printStarSquare(arraLength);
+        printStarSquare(arrayLength);
 
         //Вызываем метод для зануления его левой диагонали.
         zerosTheDiagonals(arr);
